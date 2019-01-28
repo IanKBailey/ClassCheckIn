@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DuckAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZIb-BM-4Al">
+                                <rect key="frame" x="18" y="508" width="339" height="100"/>
+                                <connections>
+                                    <action selector="Slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="5yv-iy-Xsf"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="vie-Uy-iPR">
+                                <rect key="frame" x="137.5" y="56" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IaH-q9-Hhw"/>
+                                    <constraint firstAttribute="width" constant="100" id="sje-Sz-LcO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVP-WV-qIi">
+                                <rect key="frame" x="87.5" y="247" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PP9-Qd-1Wm"/>
+                                    <constraint firstAttribute="width" constant="200" id="VO3-r6-aGR"/>
+                                </constraints>
+                                <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="CatChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOE-VX-w2N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg7-mb-VrU">
+                                <rect key="frame" x="11" y="467" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZIb-BM-4Al" firstAttribute="top" secondItem="dg7-mb-VrU" secondAttribute="bottom" constant="20" id="IHf-NN-doM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZIb-BM-4Al" secondAttribute="trailing" constant="20" id="JUS-qb-gpm"/>
+                            <constraint firstItem="TVP-WV-qIi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QR7-iI-Wvw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg7-mb-VrU" secondAttribute="trailing" constant="11" id="QvQ-48-7xb"/>
+                            <constraint firstItem="vie-Uy-iPR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rd8-yk-mjN"/>
+                            <constraint firstItem="TVP-WV-qIi" firstAttribute="top" secondItem="vie-Uy-iPR" secondAttribute="bottom" constant="91" id="Ymr-UX-g5d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZIb-BM-4Al" secondAttribute="bottom" constant="60" id="eYD-Pq-txf"/>
+                            <constraint firstItem="vie-Uy-iPR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="mer-GO-ljm"/>
+                            <constraint firstItem="dg7-mb-VrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="o4q-89-Dpd"/>
+                            <constraint firstItem="dg7-mb-VrU" firstAttribute="top" secondItem="TVP-WV-qIi" secondAttribute="bottom" constant="20" id="q1T-Qa-3L2"/>
+                            <constraint firstItem="ZIb-BM-4Al" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sV3-Pa-DoD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cat" destination="TVP-WV-qIi" id="zwO-hS-lCr"/>
+                        <outlet property="duck" destination="vie-Uy-iPR" id="Jdg-ag-zRd"/>
+                        <outlet property="label" destination="dg7-mb-VrU" id="jNE-Fb-nnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="369" height="269"/>
+        <image name="duck" width="512" height="512"/>
+    </resources>
+</document>
